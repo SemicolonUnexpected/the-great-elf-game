@@ -6,6 +6,7 @@ data Account = Account {
     tax :: Int
 }
 
+
 instance Show Account where
     show (Account a) = (++) ["Balance: ", show (balance a), " Elves: ", show (elves a), " Tax"]
 --day :: Int -> Option
@@ -15,6 +16,7 @@ instance Show Account where
 main :: IO ()
 main = do
     putStrLn "----- The Great Elf Game -----"
-    account :: Account 
-    let account = Account 0 0 0
-    putStrLn (show account)
+
+    numPlayers <- getLine
+
+    putStrLn numPlayers
